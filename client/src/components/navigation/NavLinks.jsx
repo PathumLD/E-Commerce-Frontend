@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useAuth } from '../../contexts/AuthContext';
-import { useCart } from '../../contexts/CartContext';
+import { useAuth } from '../../context/AuthContext';
 
 const NavLinks = ({ isMobile, onItemClick }) => {
   const { user, logout } = useAuth();
