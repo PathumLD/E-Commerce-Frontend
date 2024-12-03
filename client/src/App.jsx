@@ -16,57 +16,61 @@ function App() {
     <Router>
       <AuthProvider>
         <CartProvider>
-          <div className="container min-h-screen mx-auto mt-4 bg-gray-100 rounded-t-xl">
-            <Navigation />
-            <div className="pt-4">
-              <Routes>
-                <Route path="/" element={<Products />} />
-                <Route path="/products" element={<Products />} />
-                <Route path="/cart" element={<Cart />} />
-                <Route
-                  path="/checkout"
-                  element={
-                    <ProtectedRoute>
-                      <Checkout />
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
-                  path="/order-confirmation"
-                  element={
-                    <ProtectedRoute>
-                      <OrderConfirmation />
-                    </ProtectedRoute>
-                  }
-                />
-                <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Register />} />
-              </Routes>
+          <div className='mx-auto overflow-hidden lg:container'>
+            <div className="min-h-screen bg-white lg:mt-4 rounded-t-xl">
+              <div className='sticky'>
+                <Navigation />
+              </div>
+              <div className="pt-4">
+                <Routes>
+                  <Route path="/" element={<Products />} />
+                  <Route path="/products" element={<Products />} />
+                  <Route path="/cart" element={<Cart />} />
+                  <Route
+                    path="/checkout"
+                    element={
+                      <ProtectedRoute>
+                        <Checkout />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route
+                    path="/order-confirmation"
+                    element={
+                      <ProtectedRoute>
+                        <OrderConfirmation />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/register" element={<Register />} />
+                </Routes>
+              </div>
+              <Toaster 
+                position="top-right"
+                toastOptions={{
+                  duration: 2000,
+                  style: {
+                    background: '#363636',
+                    color: '#fff',
+                  },
+                  success: {
+                    duration: 2000,
+                    iconTheme: {
+                      primary: '#4ade80',
+                      secondary: '#fff',
+                    },
+                  },
+                  error: {
+                    duration: 2000,
+                    iconTheme: {
+                      primary: '#ef4444',
+                      secondary: '#fff',
+                    },
+                  },
+                }}
+              />
             </div>
-            <Toaster 
-              position="top-right"
-              toastOptions={{
-                duration: 2000,
-                style: {
-                  background: '#363636',
-                  color: '#fff',
-                },
-                success: {
-                  duration: 2000,
-                  iconTheme: {
-                    primary: '#4ade80',
-                    secondary: '#fff',
-                  },
-                },
-                error: {
-                  duration: 2000,
-                  iconTheme: {
-                    primary: '#ef4444',
-                    secondary: '#fff',
-                  },
-                },
-              }}
-            />
           </div>
         </CartProvider>
       </AuthProvider>
