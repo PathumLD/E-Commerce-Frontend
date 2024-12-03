@@ -53,7 +53,7 @@ const Checkout = () => {
       <h2 className="mb-6 text-2xl font-bold">Checkout</h2>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         <div className="space-y-6">
-          <div className="p-6 bg-white rounded-lg shadow">
+          <div className="p-6 bg-white border rounded-lg shadow-xl">
             <h3 className="mb-4 text-lg font-semibold">Shipping Information</h3>
             <form onSubmit={formik.handleSubmit} className="space-y-4">
               <div>
@@ -61,7 +61,7 @@ const Checkout = () => {
                 <input
                   type="text"
                   {...formik.getFieldProps('fullName')}
-                  className="block w-full px-2 mt-1 border-gray-300 rounded-md shadow-sm bg-blue-50"
+                  className="block w-full px-2 py-1 mt-1 border-gray-300 rounded-md shadow-sm bg-blue-50"
                 />
                 {formik.touched.fullName && formik.errors.fullName && (
                   <div className="text-sm text-red-600">{formik.errors.fullName}</div>
@@ -73,7 +73,7 @@ const Checkout = () => {
                 <input
                   type="email"
                   {...formik.getFieldProps('email')}
-                  className="block w-full px-2 mt-1 border-gray-300 rounded-md shadow-sm bg-blue-50"
+                  className="block w-full px-2 py-1 mt-1 border-gray-300 rounded-md shadow-sm bg-blue-50"
                 />
                 {formik.touched.email && formik.errors.email && (
                   <div className="text-sm text-red-600">{formik.errors.email}</div>
@@ -85,7 +85,7 @@ const Checkout = () => {
                 <input
                   type="text"
                   {...formik.getFieldProps('address')}
-                  className="block w-full px-2 mt-1 border-gray-300 rounded-md shadow-sm bg-blue-50"
+                  className="block w-full px-2 py-1 mt-1 border-gray-300 rounded-md shadow-sm bg-blue-50"
                 />
                 {formik.touched.address && formik.errors.address && (
                   <div className="text-sm text-red-600">{formik.errors.address}</div>
@@ -98,7 +98,7 @@ const Checkout = () => {
                   <input
                     type="text"
                     {...formik.getFieldProps('city')}
-                    className="block w-full px-2 mt-1 border-gray-300 rounded-md shadow-sm bg-blue-50"
+                    className="block w-full px-2 py-1 mt-1 border-gray-300 rounded-md shadow-sm bg-blue-50"
                   />
                   {formik.touched.city && formik.errors.city && (
                     <div className="text-sm text-red-600">{formik.errors.city}</div>
@@ -109,7 +109,7 @@ const Checkout = () => {
                   <input
                     type="text"
                     {...formik.getFieldProps('postalCode')}
-                    className="block w-full px-2 mt-1 border-gray-300 rounded-md shadow-sm bg-blue-50"
+                    className="block w-full px-2 py-1 mt-1 border-gray-300 rounded-md shadow-sm bg-blue-50"
                   />
                   {formik.touched.postalCode && formik.errors.postalCode && (
                     <div className="text-sm text-red-600">{formik.errors.postalCode}</div>
@@ -123,7 +123,7 @@ const Checkout = () => {
                   type="text"
                   {...formik.getFieldProps('cardNumber')}
                   placeholder="1234 5678 9012 3456"
-                  className="block w-full px-2 mt-1 border-gray-300 rounded-md shadow-sm bg-blue-50"
+                  className="block w-full px-2 py-1 mt-1 border-gray-300 rounded-md shadow-sm bg-blue-50"
                 />
                 {formik.touched.cardNumber && formik.errors.cardNumber && (
                   <div className="text-sm text-red-600">{formik.errors.cardNumber}</div>
@@ -137,7 +137,7 @@ const Checkout = () => {
                     type="text"
                     {...formik.getFieldProps('expiryDate')}
                     placeholder="MM/YY"
-                    className="block w-full px-2 mt-1 border-gray-300 rounded-md shadow-sm bg-blue-50"
+                    className="block w-full px-2 py-1 mt-1 border-gray-300 rounded-md shadow-sm bg-blue-50"
                   />
                   {formik.touched.expiryDate && formik.errors.expiryDate && (
                     <div className="text-sm text-red-600">{formik.errors.expiryDate}</div>
@@ -149,7 +149,7 @@ const Checkout = () => {
                     type="text"
                     {...formik.getFieldProps('cvv')}
                     placeholder="123"
-                    className="block w-full px-2 mt-1 border-gray-300 rounded-md shadow-sm bg-blue-50"
+                    className="block w-full px-2 py-1 mt-1 border-gray-300 rounded-md shadow-sm bg-blue-50"
                   />
                   {formik.touched.cvv && formik.errors.cvv && (
                     <div className="text-sm text-red-600">{formik.errors.cvv}</div>
@@ -171,7 +171,7 @@ const Checkout = () => {
         </div>
 
         <div className="space-y-6">
-          <div className="p-6 bg-white rounded-lg shadow">
+          <div className="p-6 bg-white border rounded-lg shadow-xl">
             <h3 className="mb-4 text-lg font-semibold">Order Summary</h3>
             <div className="space-y-4">
               {cart.map((item) => (

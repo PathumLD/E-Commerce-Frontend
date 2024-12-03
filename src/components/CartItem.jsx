@@ -17,7 +17,7 @@ const CartItem = ({ item }) => {
   };
 
   return (
-    <div className="flex items-center justify-between py-4 border-b">
+    <div className="flex items-center justify-between px-4 py-4 border border-b rounded-lg">
       <div className="flex items-center">
         <img
           src={item.image}
