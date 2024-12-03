@@ -37,7 +37,7 @@ const Login = () => {
               id="email"
               type="email"
               {...formik.getFieldProps('email')}
-              className="block w-full pl-2 mt-1 border-gray-300 rounded-md shadow-lg"
+              className="block w-full pl-2 mt-1 border-gray-300 rounded-md shadow-lg bg-blue-50"
             />
             {formik.touched.email && formik.errors.email && (
               <div className="text-sm text-red-600">{formik.errors.email}</div>
@@ -52,7 +52,7 @@ const Login = () => {
               id="password"
               type="password"
               {...formik.getFieldProps('password')}
-              className="block w-full pl-2 mt-1 border-gray-300 rounded-md shadow-lg"
+              className="block w-full pl-2 mt-1 border-gray-300 rounded-md shadow-lg bg-blue-50"
             />
             {formik.touched.password && formik.errors.password && (
               <div className="text-sm text-red-600">{formik.errors.password}</div>
