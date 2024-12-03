@@ -60,7 +60,7 @@ export const products = [
     name: "Sunglasses",
     price: 19.99,
     description: "Stylish sunglasses with UV protection",
-    image: "https://images.pexels.com/photos/1499477/pexels-photo-1499477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    image: "https://images.pexels.com/photos/46710/pexels-photo-46710.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     category: "Accessories"
   },
   {
