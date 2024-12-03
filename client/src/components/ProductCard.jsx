@@ -1,4 +1,4 @@
-import { useCart } from '../contexts/CartContext';
+import { useCart } from '../context/CartContext';
 import toast from 'react-hot-toast';
 
 const ProductCard = ({ product }) => {
