@@ -1,5 +1,5 @@
 import CartItem from '../components/CartItem';
-import { useCart } from '../contexts/CartContext';
+import { useCart } from '../context/CartContext';
 
 const Cart = () => {
   const { cart, getCartTotal } = useCart();
