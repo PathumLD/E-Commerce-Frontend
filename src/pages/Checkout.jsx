@@ -56,6 +56,7 @@ const Checkout = () => {
           <div className="p-6 bg-white border rounded-lg shadow-xl">
             <h3 className="mb-4 text-lg font-semibold">Shipping Information</h3>
             <form onSubmit={formik.handleSubmit} className="space-y-4">
+              
               <div>
                 <label className="block text-sm font-medium text-gray-700">Full Name</label>
                 <input
@@ -104,6 +105,7 @@ const Checkout = () => {
                     <div className="text-sm text-red-600">{formik.errors.city}</div>
                   )}
                 </div>
+                
                 <div>
                   <label className="block text-sm font-medium text-gray-700">Postal Code</label>
                   <input
@@ -115,6 +117,7 @@ const Checkout = () => {
                     <div className="text-sm text-red-600">{formik.errors.postalCode}</div>
                   )}
                 </div>
+                
               </div>
 
               <div>

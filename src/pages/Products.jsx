@@ -23,6 +23,7 @@ const Products = () => {
   return (
     <div className="container px-4 py-8 mx-auto">
       <div className="mb-8 md:space-x-4 md:flex">
+        
         {/* Search Input */}
         <input
           type="text"
@@ -49,7 +50,10 @@ const Products = () => {
           type="number"
           placeholder="Min price"
           value={minPrice}
-          onChange={(e) => setMinPrice(e.target.value)}
+          onChange={(e) => {
+            const value = e.target.value;
+            setMinPrice(value >= 0 ? value : '');
+          }}
           className="w-full p-2 border rounded"
         />
 
@@ -58,7 +62,10 @@ const Products = () => {
           type="number"
           placeholder="Max price"
           value={maxPrice}
-          onChange={(e) => setMaxPrice(e.target.value)}
+          onChange={(e) => {
+            const value = e.target.value;
+            setMaxPrice(value >= 0 ? value : '');
+          }}
           className="w-full p-2 border rounded"
         />
       </div>
