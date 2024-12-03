@@ -25,7 +25,7 @@ const Login = () => {
   });
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-50">
+    <div className="flex items-center justify-center min-h-screen -mt-16 bg-gray-50">
       <div className="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow">
         <h2 className="text-3xl font-bold text-center">Login</h2>
         <form onSubmit={formik.handleSubmit} className="space-y-6">
@@ -37,7 +37,7 @@ const Login = () => {
               id="email"
               type="email"
               {...formik.getFieldProps('email')}
-              className="block w-full pl-2 mt-1 border-gray-300 rounded-md shadow-lg bg-blue-50"
+              className="block w-full py-2 pl-2 mt-1 border-gray-300 rounded-md shadow-lg bg-blue-50"
             />
             {formik.touched.email && formik.errors.email && (
               <div className="text-sm text-red-600">{formik.errors.email}</div>
@@ -52,7 +52,7 @@ const Login = () => {
               id="password"
               type="password"
               {...formik.getFieldProps('password')}
-              className="block w-full pl-2 mt-1 border-gray-300 rounded-md shadow-lg bg-blue-50"
+              className="block w-full py-2 pl-2 mt-1 border-gray-300 rounded-md shadow-lg bg-blue-50"
             />
             {formik.touched.password && formik.errors.password && (
               <div className="text-sm text-red-600">{formik.errors.password}</div>
