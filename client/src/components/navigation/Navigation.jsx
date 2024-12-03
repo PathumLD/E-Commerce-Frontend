@@ -15,7 +15,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="text-white bg-gray-800">
+    <nav className="text-white bg-gray-800 rounded-t-xl">
       <div className="container px-4 mx-auto">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}

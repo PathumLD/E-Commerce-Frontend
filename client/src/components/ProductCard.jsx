@@ -10,22 +10,24 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <div className="border rounded-lg shadow-md hover:bg-black/10">
+    <div className="flex flex-col justify-between border shadow-xl rounded-xl hover:bg-black/10 hover:border-blue-700">
       <img
         src={product.image}
         alt={product.name}
-        className="object-cover w-full h-48 rounded-md"
+        className="object-cover w-full h-48 rounded-t-xl "
       />
-      <div className='p-2'>
-        <h3 className="mt-2 text-lg font-semibold">{product.name}</h3>
+      <div className="flex flex-col flex-grow p-4">
+        <h3 className="text-lg font-semibold">{product.name}</h3>
         <p className="mt-1 text-sm text-gray-600">{product.description}</p>
-        <p className="mt-2 text-lg font-bold">${product.price.toFixed(2)}</p>
-        <button
-          onClick={handleAddToCart}
-          className="z-50 w-full px-4 py-2 mt-2 text-white transition-colors bg-blue-600 rounded hover:bg-blue-700"
-        >
-          Add to Cart
-        </button>
+        <p className="my-2 text-lg font-bold">${product.price.toFixed(2)}</p>
+        <div className="mt-auto">
+          <button
+            onClick={handleAddToCart}
+            className="w-full px-4 py-2 text-white transition-colors bg-blue-600 rounded-xl hover:bg-blue-800"
+          >
+            Add to Cart
+          </button>
+        </div>
       </div>
     </div>
   );
